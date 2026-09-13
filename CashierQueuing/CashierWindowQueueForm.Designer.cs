@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnRefresh = new Button();
             btnNext = new Button();
             listCashierQueue = new ListView();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // btnRefresh
@@ -68,6 +70,12 @@
             listCashierQueue.View = View.List;
             listCashierQueue.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // CashierWindowQueueForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -86,5 +94,6 @@
         private Button btnRefresh;
         private Button btnNext;
         private ListView listCashierQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }
