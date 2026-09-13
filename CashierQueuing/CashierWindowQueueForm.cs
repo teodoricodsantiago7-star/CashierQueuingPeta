@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+
 namespace CashierQueuing
 {
     public partial class CashierWindowQueueForm : Form
@@ -35,7 +36,7 @@ namespace CashierQueuing
         {
             if (CashierClass.CashierQueue.Count > 0)
             {
-                CashierClass.CashierQueue.Dequeue();
+                CashierClass.NowServing = CashierClass.CashierQueue.Dequeue();
                 DisplayCashierQueue(CashierClass.CashierQueue);
             }
             else

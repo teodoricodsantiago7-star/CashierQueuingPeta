@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace CashierQueuing
 {
     internal class CashierClass
@@ -8,6 +9,7 @@ namespace CashierQueuing
         private int x;
         public static string getNumberInQueue = "";
         public static Queue<string> CashierQueue;
+        public static string NowServing = "";
 
         public CashierClass()
         {
